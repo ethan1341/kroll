@@ -1,11 +1,11 @@
-//Imposed an time limit. Would have refactor the AM PM in the tranlsate time function. And used AM PM times.
+//Imposed an 1.5 hour time limit. Would have refactor the AM PM in the tranlsate time function. And used AM PM times.
 
 
 
 var Clock = function () {
     this.realTimes;
     this.totalRings
-}
+};
 
 
 Clock.prototype.translateTime = function (start, end) {
@@ -80,19 +80,19 @@ Clock.prototype.getRings = function () {
     //24 HOUR SPAN
     if(originalHour == endHour){
         var hours = 0
-       for(var i = 0; i <= 12;i++){
+        for(var i = 0; i <= 12;i++){
             hours += i;
-       }
-       totalRings = hours * 2
+        }
+        totalRings = hours * 2
     }
     this.totalRings = totalRings
     return this;
-}
+};
 
 Clock.prototype.tellEveryone = function () {
     console.log(this.totalRings);
     return this.totalRings
-}
+};
 
 var testClock = new Clock();
 // Test Cases
